@@ -21,3 +21,8 @@ Takes no args, but settings are at the top of the script.
 
 ## Converting Data
 
+The yolo directory can contain an arbitrary number of folders under 'images' and 'labels' which correspond to dataset splits. Any folder called 'test' in the yolo data, will be put into the QNRF 'Test' dir, everything else will go into 'Train'. 
+
+You can set the yolo class to export using the classnum arg, eg `--classnum 0` and only the first class will be added to the QNRF annotations. You can only export 1 class per dataset.
+
+Either run it from within the repo directory (because it loads the .mat file header from structInfo.mat) or provide the full file path with the `--structinfopath` arg.
