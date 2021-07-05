@@ -16,7 +16,7 @@ my_parser.add_argument('--qnrfpath', default="./QNRFDataset/",
                     help='the output path where QNRF format data will be written to')
 my_parser.add_argument('--structinfopath', default="./structInfo.mat",
                     help='the location of the structInfo.mat file')
-my_parser.add_argument('--classnum', default=1, type=int,
+my_parser.add_argument('--classnum', default=0, type=int,
                     help='(int) the class type number to count as annotations')
 my_parser.add_argument('--startcount', default=1, type=int,
                     help='(int) the number to start file naming from, handy if combining datasets')
@@ -85,6 +85,4 @@ for subdir in labelsDirs: #for train,test,val,... dirs
 
 
 renameList.close()
-
-
-
+print("Add done")

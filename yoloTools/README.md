@@ -10,13 +10,14 @@ YOLO only accepts a clean image with its bounding box information stored in text
 
 Use this program to check whether the bounding box is drawn correctly or not during data annotation. It will read the image and text file and convert the value to produce **xmin,ymin,xmax,ymax** of the bounding box and draw it to the images.
 
-# Usage
+# checkBoundingBoxes Usage 
  - Store the dataset (images and text files) to **dataset/** folder
  
  - run `python3 checkBoundingBoxes.py` (OpenCV and Numpy is needed)
  - The result of images with the drawn bounding boxes will be stored in **result/** folder
- 
- - Set the `mypath` variable at the top of the script
+
+# countClasses Usage 
+ - Set the `mypath` variable at the top of the script or copy the annotations (.txt) files into **dataset/**
  - run `python3 countClasses.py`
 
 # Example

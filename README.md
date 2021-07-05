@@ -26,3 +26,12 @@ The yolo directory can contain an arbitrary number of folders under 'images' and
 You can set the yolo class to export using the classnum arg, eg `--classnum 0` and only the first class will be added to the QNRF annotations. You can only export 1 class per dataset.
 
 Either run it from within the repo directory (because it loads the .mat file header from structInfo.mat) or provide the full file path with the `--structinfopath` arg.
+
+
+## qnrfcows_train/val.txt
+The DM-count network requires a text file defining the train/val split. Create this using
+`cd QNRFDataset`
+`ls ./Train/*.jpg > qnrfcows.txt`
+`python ./../splitTrain.py`
+
+which will make qnrfcows_train.txt and qnrfcows_val.txt from the original Train set.
